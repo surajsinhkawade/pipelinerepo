@@ -25,6 +25,7 @@ pipeline {
             
             steps {         
                  sh 'top'
+                  sh 'df -kh'
             }
         }
     }
