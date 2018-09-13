@@ -8,7 +8,7 @@ pipeline {
                 
                 echo 'Hello World'
                 
-                dir('/tmp/') {
+                dir('BuildDir/') {
                     sh 'pwd'
                 }
                 
