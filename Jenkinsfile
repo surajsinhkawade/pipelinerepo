@@ -8,6 +8,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                sh 'which java'
+                sh 'java -version'
                 sh 'mvn -B'
             }
         }
