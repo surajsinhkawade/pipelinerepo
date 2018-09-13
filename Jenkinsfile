@@ -8,13 +8,16 @@ pipeline {
           }
         
         stage('ParallelExecute'){
-        
-            parallel {
+            steps {
+            parallel( 
+                a: {
             echo ' Running Parallel on Linux'
             },
-                 {
+                b: {
             echo ' Running Parallel on Windows'    
             }
+           )
+          }
         }
     }
     
