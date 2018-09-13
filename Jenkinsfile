@@ -1,12 +1,12 @@
 pipeline {
       agent { 
-        docker { image 'node:centos' }
+        docker { image 'centos' }
       }
       
       stages {
           stage('Test') {
               steps {
-                  sh 'node --version'
+                  sh 'df -kh'
               }
           }
       }
