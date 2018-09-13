@@ -19,7 +19,7 @@ pipeline {
               }
             }
             steps {
-                sh 'make publish'
+                sh 'top'
             }
         }
     }
