@@ -39,13 +39,12 @@ pipeline {
         
         stage('ManageCredentials'){
                 environment {
-        AWS_ACCESS_KEY_ID = credentials('jenkins-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('jenkins-aws-secret-access-key')
+        BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
     }
             steps {
                 
-                echo "${AWS_ACCESS_KEY_ID}"
-                echo "${AWS_SECRET_ACCESS_KEY}"
+                echo "${BITBUCKET_COMMON_CREDS_USR}"
+                echo "${BITBUCKET_COMMON_CREDS_PSW}"
             }
         }
     }
