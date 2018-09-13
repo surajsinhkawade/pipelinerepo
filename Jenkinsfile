@@ -25,7 +25,11 @@ pipeline {
             
             steps {         
                  //sh 'top'
+                
                   sh 'df -kh'
+                
+                 def username = 'surajsinh'
+                echo " Printing user Name: ${username}"
             }
         }
     }
