@@ -22,7 +22,10 @@ pipeline {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' 
               }
             }
-            
+         environment {
+         
+         username = 'kawade'
+        }
             
             steps {         
                  //sh 'top'
