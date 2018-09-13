@@ -5,6 +5,9 @@ pipeline {
             agent {
                 docker { image 'maven:3-alpine' }
             }
+            environment {
+                JAVA_HOME = "/var/lib/jenkins/tools/hudson.model.JDK/jdk/"
+            }
             steps {
                 echo "$JAVA_HOME"
                 sh 'mvn --version'
