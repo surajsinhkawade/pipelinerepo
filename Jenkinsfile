@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        TERM = "xterm"
+        }
 
     stages {
         stage('Build') {
@@ -18,9 +21,10 @@ pipeline {
                 currentBuild.result == null || currentBuild.result == 'SUCCESS' 
               }
             }
-            steps {
-                sh "export TERM=xterm"
-                sh 'top'
+            
+            
+            steps {         
+                 sh 'top'
             }
         }
     }
