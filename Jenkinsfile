@@ -11,6 +11,7 @@ pipeline {
             steps {
                 echo "$JAVA_HOME"
                 sh 'mvn --version'
+                sh 'ls -ltr /var/lib/jenkins/tools/hudson.model.JDK/jdk/*'
             }
         }
         stage('Front-end') {
