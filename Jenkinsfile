@@ -7,7 +7,7 @@ pipeline {
           stage('Test') {
               steps {
                   sh 'df -kh'
-                  sh 'docker ps -a'
+                  sh 'yum install httpd'
               }
           }
       }
