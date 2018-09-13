@@ -4,6 +4,9 @@ pipeline {
         TERM = "xterm"
          username = 'surajsinh'
         }
+    parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
 
     stages {
         stage('Build') {
@@ -40,11 +43,17 @@ pipeline {
         stage('ManageCredentials'){
                 environment {
         BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
-    }
+                 }
             steps {
                 
                 echo "${BITBUCKET_COMMON_CREDS_USR}"
                 echo "${BITBUCKET_COMMON_CREDS_PSW}"
+            }
+        }
+        
+        stage('DisplayParams'){
+            steps {
+             echo "${params.Greeting} World!"
             }
         }
     }
