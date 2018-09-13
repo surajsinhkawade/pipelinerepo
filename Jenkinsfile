@@ -22,9 +22,9 @@ pipeline {
             stage('VerifyFiles'){
                 steps {
                     fileExists 'test.txt'
-                    if ( fileExists ('abcd.txt')){
+                    fileExists 'abcd.txt'
                             echo 'True'
-                     }
+                     
                        }
                 }
     }
