@@ -10,6 +10,9 @@ pipeline {
             steps {
                 sh 'which java'
                 sh 'java -version'
+                sh 'mkdir -p /opt/java'
+                sh 'cd /opt/java'
+                
                 sh 'mvn -B'
             }
         }
