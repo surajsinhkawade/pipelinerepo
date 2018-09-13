@@ -9,10 +9,10 @@ pipeline {
         
         stage('ParallelExecute'){
         
-        parallel linux: {
+            parallel {
             echo ' Running Parallel on Linux'
             },
-                 windows: {
+                 {
             echo ' Running Parallel on Windows'    
             }
         }
