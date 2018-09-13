@@ -6,6 +6,7 @@ pipeline {
                 docker { image 'maven:3-alpine' }
             }
             steps {
+                echo "$JAVA_HOME"
                 sh 'mvn --version'
             }
         }
