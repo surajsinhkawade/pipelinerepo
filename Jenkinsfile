@@ -37,7 +37,9 @@ pipeline {
                 }
         
         stage('DisplayEnv'){
+            steps {
             echo 'env.*'
+            }
         }
         
     }
