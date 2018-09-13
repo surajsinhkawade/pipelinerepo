@@ -19,6 +19,12 @@ pipeline {
             
                 }
         
+        stage('Confirm'){
+            steps{
+                input message: 'Confirmation4NextStep', ok: 'Confirm'
+            }
+        }
+        
             stage('VerifyFiles'){
                 steps {
                     fileExists 'test.txt'
