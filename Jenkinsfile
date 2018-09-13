@@ -6,7 +6,14 @@ pipeline {
                   sh 'Building Software'
               }
           }
-    
+        
+        parallel linux: {
+            echo ' Running Parallel on Linux'
+            },
+                 windows: {
+            echo ' Running Parallel on Windows'    
+            }
+           
     }
     
     post {
