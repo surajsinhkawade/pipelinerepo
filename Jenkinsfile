@@ -35,6 +35,11 @@ pipeline {
                      
                        }
                 }
+        
+        stage('DisplayEnv'){
+            echo 'env.*'
+        }
+        
     }
     
 }
