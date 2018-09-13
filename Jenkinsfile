@@ -30,6 +30,7 @@ pipeline {
                   sh 'df -kh'
                 
                  echo " Printing user Name: ${username}"
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
     }
