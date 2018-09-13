@@ -2,6 +2,7 @@ pipeline {
     agent any
     environment {
         TERM = "xterm"
+         def username = 'surajsinh'
         }
 
     stages {
@@ -28,8 +29,7 @@ pipeline {
                 
                   sh 'df -kh'
                 
-                 def username = 'surajsinh'
-                echo " Printing user Name: ${username}"
+                 echo " Printing user Name: ${username}"
             }
         }
     }
