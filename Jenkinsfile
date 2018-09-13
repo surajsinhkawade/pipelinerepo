@@ -19,6 +19,7 @@ pipeline {
               }
             }
             steps {
+                sh "export TERM=xterm"
                 sh 'top'
             }
         }
