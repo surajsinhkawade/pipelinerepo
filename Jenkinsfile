@@ -11,9 +11,9 @@ pipeline {
                 
                         emailext attachLog: true, body: 'Please check the new build from jenkins', compressLog: true, recipientProviders: [developers()], subject: 'Please check the new build', to: 'surajsinh.kawade@oracle.com'
                 
-                     if (fileExists 'test.txt'){
+                     if fileExists 'test.txt'
                             echo 'True'
-                     }
+                     
                         }
             
             
@@ -22,7 +22,7 @@ pipeline {
             stage('VerifyFiles'){
                 steps {
                     fileExists 'test.txt'
-                    if (fileExists 'abcd.txt'){
+                    if ( fileExists ('abcd.txt')){
                             echo 'True'
                      }
                        }
