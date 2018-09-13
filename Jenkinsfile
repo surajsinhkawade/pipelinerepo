@@ -39,10 +39,10 @@ pipeline {
         stage('DisplayEnv'){
             steps {
             echo 'env.BRANCH_NAME'
-                echo '{env.BUILD_NUMBER}'
-            echo 'env.BUILD_ID'
-                JOB_NAME
-                env.JENKINS_HOME
+                echo '${env.BUILD_NUMBER}'
+                echo '${env.BUILD_ID}'
+                echo '${JOB_NAME}'
+                echo '${env.JENKINS_HOME}'
             }
         }
         
