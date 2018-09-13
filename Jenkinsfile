@@ -27,6 +27,8 @@ pipeline {
         
             stage('VerifyFiles'){
                 steps {
+                    
+                    pwd()
                     fileExists 'test.txt'
                     fileExists 'abcd.txt'
                             echo 'True'
