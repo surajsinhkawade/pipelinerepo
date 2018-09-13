@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         TERM = "xterm"
-         def username = 'surajsinh'
+         username = 'surajsinh'
         }
 
     stages {
