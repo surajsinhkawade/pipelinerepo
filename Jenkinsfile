@@ -1,14 +1,12 @@
 pipeline {
-      agent { 
-        docker { image 'centos' }
-      }
-      
-      stages {
-          stage('Test') {
-              steps {
-                  sh 'df -kh'
-                  sh 'yum install httpd'
-              }
-          }
-      }
+    agent {
+        docker { image 'node:7-alpine' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
