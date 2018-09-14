@@ -8,6 +8,11 @@ node {
         sh 'df -kh'
     }
     
-    customImage.push()
-    customImage.push('latest')
+     docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+            customImage.push("${env.BUILD_NUMBER}")
+            customImage.push("latest")
+        }
+    
+    //customImage.push()
+    //customImage.push('latest')
 }
