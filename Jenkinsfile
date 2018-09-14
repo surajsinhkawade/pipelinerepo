@@ -7,4 +7,7 @@ node {
         sh 'hostname'
         sh 'df -kh'
     }
+    
+    customImage.push()
+    customImage.push('latest')
 }
