@@ -15,7 +15,7 @@ pipeline {
         }
         stage('dev2') {
           steps {
-            sh 'top'
+            sh 'top -n 1 -b'
           }
         }
       }
