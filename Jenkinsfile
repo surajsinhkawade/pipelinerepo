@@ -9,7 +9,8 @@ node {
     }
     
      //docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-    docker.withRegistry('https://hub.docker.com/r/surajsinhkawade/demorep/', 'docker-hub-credentials') {
+    //docker.withRegistry('https://hub.docker.com/r/surajsinhkawade/demorep/', 'docker-hub-credentials') {
+    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
             customImage.push("${env.BUILD_NUMBER}")
             customImage.push("latest")
         }
