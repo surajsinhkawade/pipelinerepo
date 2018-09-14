@@ -13,6 +13,11 @@ pipeline {
             sleep 10
           }
         }
+        stage('dev2') {
+          steps {
+            sh 'top'
+          }
+        }
       }
     }
     stage('SIT') {
