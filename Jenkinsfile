@@ -1,28 +1,29 @@
 pipeline {
   agent any
   stages {
-    stage('Dev'){
-    
-        steps {
+    stage('Dev') {
+      parallel {
+        stage('Dev') {
+          steps {
             echo 'Dev Stage'
+          }
         }
-    }
-    
-    stage('SIT'){
-    
-        steps {
-            echo 'SIT Stage'
+        stage('dev1') {
+          steps {
+            sleep 10
+          }
         }
+      }
     }
-
-
-    stage('UAT'){
-    
-        steps {
-            echo 'UAT Stage'
-        }
+    stage('SIT') {
+      steps {
+        echo 'SIT Stage'
+      }
     }
-
-        
+    stage('UAT') {
+      steps {
+        echo 'UAT Stage'
+      }
+    }
   }
 }
