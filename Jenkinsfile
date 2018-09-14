@@ -9,6 +9,8 @@ pipeline {
     stage('dev') {
       steps {
         sh 'df -kh'
+        echo 'hello buddy'
+        sh 'hostname'
       }
     }
   }
